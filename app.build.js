@@ -1,6 +1,6 @@
 ({
     baseUrl: ".",
-    name: "spec",
+    name: "main",
     out: "optimized.js",
     paths: {
         jquery: "empty:"

@@ -1,19 +1,31 @@
 define(['jquery', 'underscore'], function ($, _) {
-    var tmpl;
+    var ajaxGet = function(url, callback) {
+        $.ajax({
+            url: url,
+            dataType: 'text',
+            success: function(text) {
+                var tmplFunc = _.template(text);
+
+                callback(tmplFunc);
+            }
+        });
+    };
+
+    var nodeGet = function(url, callback) {
+        var fs = require.nodeRequire('fs');
+
+        callback(fs.readFileSync(url, 'utf8'));
+    };
 
     return {
         version: '0.0.1',
 
         load: function (name, req, onLoad, config) {
-            $.ajax({
-              url: name,
-              dataType: 'text',
-              success: function(text) {
-                  var tmplFunc = _.template(text);
+           ajaxGet(name, onLoad);
+        },
 
-                  onLoad(tmplFunc);
-              }
-            });
+        write: function (pluginName, moduleName, write) {
+            
         }
     };
 });
