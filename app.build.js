@@ -3,6 +3,7 @@
     name: "main",
     out: "optimized.js",
     paths: {
-        jquery: "empty:"
+        jquery: "empty:",
+        underscore: "ext/underscore"
     }
 })
