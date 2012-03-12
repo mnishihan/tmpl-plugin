@@ -1,7 +1,7 @@
 ({
-    baseUrl: ".",
+    baseUrl: "src",
     name: "main",
-    out: "optimized.js",
+    out: "src/optimized.js",
     paths: {
         jquery: "empty:",
         underscore: "ext/underscore"

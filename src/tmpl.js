@@ -13,6 +13,12 @@ define(['jquery', 'underscore'], function ($, _) {
 
     var nodeGet = function(url, callback) {
         var fs = require.nodeRequire('fs');
+        var path = require.nodeRequire('path');
+        var baseUrl = require.s.contexts._.config.baseUrl;
+        
+        if (url.indexOf('/') !== 0) {
+            url = path.join(baseUrl, url); 
+        }
 
         callback(fs.readFileSync(url, 'utf8'));
     };
