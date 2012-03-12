@@ -4,7 +4,7 @@ define(function() {
            var tmplFunc;
 
            runs(function() {
-              require(['tmpl!/hello_world_tmpl.html'], function(tmpl) {
+              require(['tmpl!templates/hello_world_tmpl.html'], function(tmpl) {
                   tmplFunc = tmpl;
               });
            });
@@ -23,11 +23,11 @@ define(function() {
            var func1, func2;
 
            runs(function() {
-              require(['tmpl!/hello_world_tmpl.html'], function(tmpl) {
+              require(['tmpl!templates/hello_world_tmpl.html'], function(tmpl) {
                   func1 = tmpl;
               });
 
-              require(['tmpl!/hello_world_tmpl.html'], function(tmpl) {
+              require(['tmpl!templates/hello_world_tmpl.html'], function(tmpl) {
                   func2 = tmpl;
               });
            });
