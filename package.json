@@ -1,0 +1,16 @@
+{
+  "author": "Larry Myers <larry@larrymyers.com>",
+  "name": "tmpl-plugin",
+  "description": "A require.js plugin for remote loading and processing of templates.",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/larrymyers/tmpl-plugin.git"
+  },
+  "engines": {
+    "node": "~0.6.10"
+  },
+  "dependencies": {
+    "handlebars": ">=1.0.5beta"
+  }
+}
